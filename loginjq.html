@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Hide and Show</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #loginForm {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+      display: none; /* Start hidden */
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Welcome</h2>
+<button id="showBtn">Show Login Form</button>
+<button id="hideBtn">Hide Login Form</button>
+
+<div id="loginForm">
+  <h3>Login</h3>
+  <form>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username"><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password"><br><br>
+    <input type="submit" value="Login">
+  </form>
+</div><br>
+
+<script>
+  $(document).ready(function() {
+    $('#showBtn').click(function() {
+      $('#loginForm').slideDown(); // Or use .show()
+    });
+
+    $('#hideBtn').click(function() {
+      $('#loginForm').slideUp(); // Or use .hide()
+    });
+  });
+</script>
+</body>
+</html>
